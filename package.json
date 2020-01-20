@@ -4,7 +4,7 @@
   "description": "Testing jest@25 memory leak detection",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectLeaks --runInBand"
   },
   "keywords": [
     "jest"
