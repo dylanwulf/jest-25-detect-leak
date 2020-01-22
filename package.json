@@ -4,7 +4,9 @@
   "description": "Testing jest@25 memory leak detection",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectLeaks --runInBand"
+    "test": "jest --env=jsdom --detect-leaks --runInBand",
+    "test:sixteen": "jest --env=jest-environment-jsdom-sixteen --detect-leaks --runInBand",
+    "test:node": "jest --env=node --detectLeaks --runInBand"
   },
   "keywords": [
     "jest"
@@ -12,6 +14,8 @@
   "author": "Dylan Wulf",
   "license": "ISC",
   "dependencies": {
-    "jest": "25.0.0"
+    "jest": "25.1.0",
+    "jest-environment-jsdom-sixteen": "1.0.0",
+    "weak-napi": "1.0.3"
   }
 }
